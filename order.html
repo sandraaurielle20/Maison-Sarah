@@ -4,35 +4,139 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Order - Maison Sarah</title>
-    <link rel="stylesheet" href="styles.css" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@600;700&display=swap"
       rel="stylesheet"
     />
+
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <header>
       <div class="container">
-        <div class="header-bar"></div>
-        <p class="brand">Maison Sarah</p>
-        <nav>
-          <a href="index.html">Home</a>
-          <a href="menu.html">Menu</a>
-          <a href="order.html">Order</a>
-        </nav>
-      </div>
-    </header>
-    <main>
-      <div class="container">
-        <h1>Place Your Order</h1>
-        <p>
-          Our pre-order form is coming soon. Please check back later for online
-          ordering.
+        <div class="header-bar">
+          <p class="brand">Maison Sarah</p>
+          <nav>
+            <a href="index.html">Home</a>
+            <a href="menu.html">Menu</a>
+            <a href="order.html">Order</a>
+          </nav>
+        </div>
+        <p class="tagline">
+          Pre-order your favorites and pick them up at the perfect time.
         </p>
       </div>
+    </header>
+
+    <main>
+      <div class="container">
+        <h1>Place your weekend order</h1>
+        <p>
+          Use the form below to pre-order breads, cakes, and pastries for pickup
+          this weekend.
+        </p>
+
+        <form>
+          <!-- Fieldset 1: Your details -->
+          <fieldset class="field">
+            <legend>Your details</legend>
+
+            <label for="name">Name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Your full name"
+              required
+            />
+
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="you@example.com"
+              required
+            />
+          </fieldset>
+
+          <!-- Fieldset 2: Pickup details -->
+          <fieldset class="field">
+            <legend>Pickup details</legend>
+
+            <label>Pickup day</label>
+            <div class="choice">
+              <label>
+                <input
+                  type="radio"
+                  name="pickup-day"
+                  value="saturday"
+                  checked
+                />
+                Saturday
+              </label>
+              <label>
+                <input type="radio" name="pickup-day" value="sunday" />
+                Sunday
+              </label>
+            </div>
+
+            <label for="pickup-time">Pickup time</label>
+            <select id="pickup-time" name="pickup-time" required>
+              <option value="">Select a time</option>
+              <option>09:00</option>
+              <option>10:00</option>
+              <option>11:00</option>
+              <option>12:00</option>
+              <option>13:00</option>
+              <option>14:00</option>
+              <option>15:00</option>
+              <option>16:00</option>
+              <option>17:00</option>
+            </select>
+          </fieldset>
+
+          <!-- Fieldset 3: Order items -->
+          <fieldset class="field">
+            <legend>Order items</legend>
+
+            <label>Choose your products</label>
+            <div class="choice">
+              <label>
+                <input type="checkbox" name="items" value="baguette" />
+                Baguette
+              </label>
+              <label>
+                <input type="checkbox" name="items" value="chocolate-cake" />
+                Chocolate cake
+              </label>
+              <label>
+                <input type="checkbox" name="items" value="croissant" />
+                Croissant
+              </label>
+              <label>
+                <input type="checkbox" name="items" value="cinnamon-roll" />
+                Cinnamon roll
+              </label>
+            </div>
+
+            <label for="notes">Notes</label>
+            <textarea
+              id="notes"
+              name="notes"
+              rows="5"
+              placeholder="Any special requests?"
+            ></textarea>
+          </fieldset>
+
+          <button type="submit">Submit order</button>
+        </form>
+      </div>
     </main>
+
     <footer>
       <div class="container">
         <p>&copy; 2026 Maison Sarah. All rights reserved.</p>
