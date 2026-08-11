@@ -1,9 +1,14 @@
-/* Typography system */
+/* Global box model and base layout */
+* {
+  box-sizing: border-box;
+}
+
 html {
   font-size: 62.5%;
 }
 
 body {
+  margin: 0;
   background-color: #fdf8f2;
   color: #2e1f1a;
   font-family: "Lato", sans-serif;
@@ -11,7 +16,43 @@ body {
   line-height: 1.6;
 }
 
-/* Headings */
+/* Centered container */
+.container {
+  width: min(100% - 3rem, 1100px);
+  margin: 0 auto;
+}
+
+/* Header, footer, navigation */
+header,
+footer {
+  background-color: #4a1f1f;
+  color: #f8e7c9;
+  text-align: center;
+}
+
+.header-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.6rem 0;
+}
+
+main,
+footer {
+  padding: 2rem 0;
+}
+
+nav {
+  display: flex;
+  gap: 1.6rem;
+}
+
+nav a {
+  color: #fff8e7;
+  text-decoration: none;
+}
+
+/* Typography: headings, brand, tagline */
 h1,
 h2 {
   color: #7a3e2b;
@@ -27,7 +68,6 @@ h2 {
   font-size: 2.4rem;
 }
 
-/* Brand & tagline */
 .brand {
   color: #ffd7a0;
   font-family: "Playfair Display", serif;
@@ -36,29 +76,42 @@ h2 {
 }
 
 .tagline {
-  color: #f3d9b1; /* chose your last color definition */
+  color: #f3d9b1;
   font-style: italic;
   font-size: 1.4rem;
 }
 
-/* Header, footer, navigation, prices */
-header,
-footer {
-  background-color: #4a1f1f;
-  color: #f8e7c9;
-  text-align: center;
-}
-
-nav a {
-  color: #fff8e7;
-  text-decoration: none;
+/* Body text and prices */
+p {
+  text-align: left;
 }
 
 .price {
   color: #a63d40;
+  font-weight: 700;
 }
 
-/* Paragraphs stay left-aligned */
-p {
-  text-align: left;
+/* Images (hero + cards) */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Weekend specials cards (for menu page) */
+.card-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.card {
+  flex: 1 1 240px;
+  border: 1px solid #ddd;
+  padding: 1.5rem;
+  background: #fff;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
 }
