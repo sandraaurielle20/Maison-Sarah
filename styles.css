@@ -1,0 +1,44 @@
+body {
+  background-color: #fdf8f2;
+  color: #2e1f1a;
+}
+
+header {
+  background-color: #4a1f1f;
+  color: #d2cec7;
+}
+h1,
+h2 {
+  color: #7a3e2b;
+}
+nav a {
+  color: #fff8e7;
+  text-decoration: none;
+}
+.brand {
+  color: #ffd7a0;
+}
+.tagline {
+  color: #5c4033;
+}
+.price {
+  color: #a63d40;
+}
+header,
+footer {
+  background-color: #4a1f1f;
+  color: #f8e7c9;
+}
+
+nav a {
+  color: #fff8e7;
+  text-decoration: none;
+}
+
+.brand {
+  color: #ffd7a0;
+}
+
+.tagline {
+  color: #f3d9b1;
+}
